@@ -1,0 +1,17 @@
+{
+    "hosting": {
+      "site": "univesp-pi-3-c2afb",
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  }
