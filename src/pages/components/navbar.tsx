@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaInstagram } from 'react-icons/fa'; 
+import { Link } from 'react-router-dom';
 
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="/images/logo-circulo.png" alt="Delícias da Drii - Logo" />
+        <Link to="/"><img src="/images/logo-circulo.png" alt="Delícias da Drii - Logo" /></Link>
         <h2>Delícias da Drii</h2>
       </div>
       <div className="social-icons">
@@ -19,3 +20,4 @@ function Navbar() {
 }
 
 export default Navbar;
+               

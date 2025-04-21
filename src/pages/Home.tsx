@@ -6,6 +6,7 @@ import './home.sass'
 import CardMaisPedidos from './components/cardMaisPedidos';
 import CardProntosEntrega from './components/cardProntosEntrega';
 
+
 const produtosMaisPedidos = [
   { img: '/images/beijinho.jpg', nome: 'Doce 1'},
   { img: '/images/bichodepe.jpg', nome: 'Doce 2'},
@@ -16,9 +17,9 @@ const produtosMaisPedidos = [
 ];
 
 const produtosProntosEntrega = [
-  { img: '/images/beijinho.jpg', nome: 'Doce 1', descricao: 'Descrição do doce 3', preco: 'RS: 10,00'  },
-  { img: '/images/bichodepe.jpg', nome: 'Doce 2', descricao: 'Descrição do doce 4', preco: 'RS: 15,00' },
-  { img: '/images/brigadeiro.jpg', nome: 'Doce 3', descricao: 'Descrição do doce 3', preco: 'RS: 20,00' },
+  { img: '/images/cento_doces_tradicional.jpg', nome: 'Cento de doces tradicionais', descricao: 'Brigadeiro tradicionar, beijinho ou bicho de pé', preco: 'RS: 120,00' },
+  { img: '/images/cento_doces.jpg', nome: 'Cento de doces finos', descricao: 'Ninho com nutella, paçoca, doce de leite, ferrero rocher, maraccuja, pistache', preco: 'RS: 140,00' },
+  { img: '/images/brigadeiro.jpg', nome: 'Brigadeiro na caixa', descricao: 'caixinha com 4 sabores variados', preco: 'RS: 12,00' },
   { img: '/images/cenouracomchocolate.jpg', nome: 'Doce 4', descricao: 'Descrição do doce 3', preco: 'RS: 30,00' },
 ];
 
