@@ -1,0 +1,69 @@
+$rosa-claro: #e2a9c0
+$rosa-destaque: #d080b0
+$laranja-destaque: #d36c1f
+
+.navbar
+  background-color: white
+  font-family: 'Cursive', sans-serif
+  display: flex
+  flex-direction: column
+
+  .navbar-top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 20px
+
+    .brand-area
+      display: flex
+      align-items: center
+      gap: 10px
+
+      h2
+        font-size: 26px
+        color: $rosa-destaque
+        margin: 0
+
+      a
+        color: $rosa-destaque
+
+  .navbar-middle
+    background-color: $rosa-claro
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 50px
+    padding: 15px 0
+    position: relative
+    width: 100%
+
+
+    .nav-item
+      color: white
+      text-decoration: none
+      font-size: 16px
+      padding: 8px 16px
+      border-radius: 12px
+      transition: 0.3s ease
+
+      &.active
+        background-color: white
+        color: $laranja-destaque
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+
+      &:hover
+        opacity: 0.9
+
+    .logo-central
+      position: absolute
+      top: -35px
+      left: 50%
+      transform: translateX(-50%)
+      background-color: $rosa-claro
+      padding: 6px
+      border-radius: 50%
+
+      img
+        height: 75px
+        width: 75px
+

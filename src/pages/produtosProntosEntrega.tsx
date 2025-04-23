@@ -33,9 +33,7 @@ const produtosProntosEntrega = [
 function ProdutosProntosEntrega() {
   return (
     <div>
-      <Navbar />
-      <NavBarBottom />
-      
+      <Navbar />      
       <div className="content">
         <h2>Produtos Pronto para Entrega</h2>
         <div className="cards-container">

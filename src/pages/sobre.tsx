@@ -8,7 +8,6 @@ const Sobre = () => {
   return (
     <div className="sobre-page">
         <Navbar />
-        <NavBarBottom />
       {}
       <section className="secao quem-somos">
         <div className="texto">

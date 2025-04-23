@@ -27,8 +27,6 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <NavBarBottom />
-
       <div className="content">
         <h2>Os mais pedidos</h2>
 
