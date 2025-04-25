@@ -1,7 +1,8 @@
 import React from 'react';
-import Navbar from './components/navbar';
-import NavBarBottom from './components/navBarBottom';
-import CardProntosEntrega from './components/cardProntosEntrega';
+import Navbar from '../components/Navbar/navbar';
+import CardProntosEntrega from '../components/CardProntosEntrega/cardProntosEntrega';
+import '../components/card.sass';
+
 
 const produtosProntosEntrega = [
   {

@@ -1,20 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './components/navbar';
-import NavBarBottom from './components/navBarBottom';
+import Navbar from '../components/Navbar/navbar';
 import './home.sass'
-import CardMaisPedidos from './components/cardMaisPedidos';
-import CardProntosEntrega from './components/cardProntosEntrega';
+import CardProntosEntrega from '../components/CardProntosEntrega/cardProntosEntrega';
+import Carrossel from "../components/Carrossel/Carrossel";
 
-
-const produtosMaisPedidos = [
-  { img: '/images/beijinho.jpg', nome: 'Doce 1'},
-  { img: '/images/bichodepe.jpg', nome: 'Doce 2'},
-  { img: '/images/brigadeiro.jpg', nome: 'Doce 3'},
-  { img: '/images/cenouracomchocolate.jpg', nome: 'Doce 4'},
-  { img: '/images/paodemel.jpg', nome: 'Doce 5'},
-  { img: '/images/gelatodeoreo.jpg', nome: 'Doce 6'},
-];
 
 const produtosProntosEntrega = [
   { img: '/images/cento_doces_tradicional.jpg', nome: 'Cento de doces tradicionais', descricao: 'Brigadeiro tradicionar, beijinho ou bicho de pé', preco: 'RS: 120,00' },
@@ -29,12 +19,7 @@ function Home() {
       <Navbar />
       <div className="content">
         <h2>Os mais pedidos</h2>
-
-        <div className="cards-container">
-          {produtosMaisPedidos.map((produto, index) => (
-            <CardMaisPedidos key={index} produto={produto} />
-          ))}
-        </div>
+        <Carrossel />
 
         <h2>Produtos Pronta a Entrega</h2>
         <div className="cards-container">

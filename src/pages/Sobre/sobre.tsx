@@ -1,6 +1,5 @@
 import React from 'react';
-import Navbar from './components/navbar';
-import NavBarBottom from './components/navBarBottom';
+import Navbar from '../components/Navbar/navbar';
 import './sobre.sass';
 
 
@@ -31,7 +30,7 @@ const Sobre = () => {
       {}
       <section className="secao diferencial">
         <div className="imagem doce">
-          <img src="/images/doces.avif" alt="Doce recheado" />
+          <img src="/images/doces.png" alt="Doce recheado" />
         </div>
         <div className="texto">
           <h2 className="destaque">Nosso diferencial</h2>

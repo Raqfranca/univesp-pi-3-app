@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './styles/global.sass'
-import Home from './pages/Home';
-import ProdutosProntosEntrega from './pages/produtosProntosEntrega';
-import Sobre from './pages/sobre';
+import Home from './pages/Home/Home';
+import ProdutosProntosEntrega from './pages/ProdutosProntaEntrega/produtosProntosEntrega'
+import Sobre from './pages/Sobre/sobre';
 
 
 function App() {

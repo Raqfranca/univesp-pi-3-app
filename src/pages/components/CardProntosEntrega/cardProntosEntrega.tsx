@@ -1,5 +1,5 @@
 import React from 'react';
-import './card.sass'
+import '../card.sass'
 
 
 interface Produto {

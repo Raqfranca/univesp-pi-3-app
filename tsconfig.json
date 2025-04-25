@@ -9,11 +9,12 @@
     "skipLibCheck": true,
     "baseUrl": "src",
     "paths": {
+      "@styles/*": ["src/pages/*"],
       "@components/*": ["components/*"]
     }
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
   ],
   "exclude": [
     "node_modules"
