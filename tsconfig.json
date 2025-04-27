@@ -2,8 +2,8 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "es2015"],
-    "allowJs": true,  // Permite o uso de arquivos .js junto com .tsx
-    "jsx": "react-jsx",  // Especifica o JSX para o React
+    "allowJs": true, 
+    "jsx": "react-jsx",  
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,

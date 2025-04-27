@@ -17,8 +17,8 @@ function Home() {
   return (
     <div>
       <Navbar />
+      
       <div className="content">
-        <h2>Os mais pedidos</h2>
         <Carrossel />
 
         <h2>Produtos Pronta a Entrega</h2>
