@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar/navbar';
 import './home.sass'
 import CardProntosEntrega from '../components/CardProntosEntrega/cardProntosEntrega';
 import Carrossel from "../components/Carrossel/Carrossel";
+import NavBarBottom from 'pages/components/NavbarBottom/navBarBottom';
 
 
 export const produtosProntosEntrega = [
@@ -31,9 +32,7 @@ function Home() {
 
       <footer>
         <div className="footer-menu">
-          <Link>Início</Link>
-          <Link>Carrinho</Link>
-          <Link>Login</Link>
+          <NavBarBottom/>
         </div>
       </footer>
     </div>

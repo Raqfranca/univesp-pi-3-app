@@ -5,6 +5,9 @@ import Home from './pages/Home/Home';
 import ProdutosProntosEntrega from './pages/ProdutosProntaEntrega/produtosProntosEntrega'
 import Sobre from './pages/Sobre/sobre';
 import PersonalizarPedido from 'pages/PersonalizarPedido';
+import LoginPage from 'pages/Login/LoginPage';
+import CadastroPage from 'pages/CadastroPage/CadastroPage';
+import MeusPedidosPage from 'pages/MeusPedidos/MeusPedidosPage';
 
 
 function App() {
@@ -15,6 +18,10 @@ function App() {
         <Route path="/produtos-prontos-entrega" element={<ProdutosProntosEntrega />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/encomendar" element ={<PersonalizarPedido />} />
+        <Route path="/carinho" element ={<PersonalizarPedido />} />
+        <Route path="/login" element ={<LoginPage />} />
+        <Route path="/signup" element ={<CadastroPage />} />
+        <Route path="/pedidos" element ={<MeusPedidosPage />} />
       </Routes>
     </Router>
   );

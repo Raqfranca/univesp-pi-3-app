@@ -1,0 +1,59 @@
+$rosa-claro: #e2a9c0
+$rosa-destaque: #d080b0
+$rosa-hover: #7a3a53
+
+.login-page
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  background-color: $rosa-claro
+  padding: 20px
+
+.login-container
+  background: #fff
+  padding: 30px
+  border-radius: 10px
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+  width: 100%
+  max-width: 400px
+  text-align: center
+
+  h1
+    margin-bottom: 20px
+    color: $rosa-hover
+
+  form
+    display: flex
+    flex-direction: column
+    gap: 15px
+
+    input
+      padding: 12px
+      border: 1px solid #ccc
+      border-radius: 5px
+      font-size: 16px
+
+    button
+      padding: 12px
+      background-color: $rosa-destaque
+      color: white
+      border: none
+      border-radius: 5px
+      font-size: 16px
+      cursor: pointer
+      transition: background-color 0.3s
+
+      &:hover
+        background-color: $rosa-hover
+
+.signup-text
+  margin-top: 15px
+  font-size: 14px
+
+  a
+    color: $rosa-hover
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
