@@ -6,7 +6,7 @@ import ProdutosProntosEntrega from './pages/ProdutosProntaEntrega/produtosPronto
 import Sobre from './pages/Sobre/sobre';
 import PersonalizarPedido from 'pages/PersonalizarPedido';
 import LoginPage from 'pages/Login/LoginPage';
-import CadastroPage from 'pages/CadastroPage/CadastroPage';
+import CadastroPage from 'pages/Cadastro/CadastroPage';
 import MeusPedidosPage from 'pages/MeusPedidos/MeusPedidosPage';
 
 

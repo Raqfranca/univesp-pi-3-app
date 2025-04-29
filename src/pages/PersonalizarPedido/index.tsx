@@ -44,7 +44,7 @@ const PersonalizarPedido = () => {
 
         <div className="input-group">
           <label>Descrição Personalizada</label>
-          <textarea rows="4"></textarea>
+          <textarea rows={4}></textarea>
         </div>
 
         <div className="input-group">

@@ -1,14 +1,18 @@
 import React, { useState, FormEvent } from 'react';
 import './loginPage.sass';
+import { LineWave } from 'react-loader-spinner';
+import Navbar from 'pages/components/Navbar/navbar';
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [error, setError] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false); 
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError('');
+    setLoading(true); 
 
     try {
       const response = await fetch('https://univesp-pi-3-api.onrender.com/users/login', {
@@ -35,6 +39,8 @@ const LoginPage: React.FC = () => {
     } catch (error) {
       console.error(error);
       setError('Email ou senha inválidos. Tente novamente.');
+    }finally {
+      setLoading(false); 
     }
   };
 
@@ -57,10 +63,20 @@ const LoginPage: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit">Entrar</button>
+          <button type="submit" disabled={loading}>Entrar</button> 
         </form>
 
-        {error && <p className="error-message">{error}</p>}
+        {loading ? (
+          <div className="loading-overlay">
+            <LineWave
+              visible={true}
+              height="100"
+              width="100"
+              color="#7a3a53"
+              ariaLabel="line-wave-loading"
+            />
+          </div>
+        ) : error && <p className="error-message">{error}</p>}
 
         <p className="signup-text">
           Não tem conta? <a href="/signup">Cadastre-se</a>
