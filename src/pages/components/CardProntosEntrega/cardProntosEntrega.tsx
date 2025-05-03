@@ -20,7 +20,6 @@ const CardProntosEntrega: React.FC<CardProntosEntregaProps> = ({ produto }) => {
       <h3>{produto.nome}</h3>
       <p>{produto.descricao}</p>
       <p>{produto.preco}</p>
-      <button>Comprar</button>
     </div>
   );
 };

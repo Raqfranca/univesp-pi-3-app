@@ -1,13 +1,13 @@
 import React from "react";
 import "./personalizarPedido.sass";
 import Navbar from '../components/Navbar/navbar';
-import { produtosProntosEntrega } from "../Home/Home";
+import { Bolos } from "../Home/Home";
 import CardProntosEntrega from '../components/CardProntosEntrega/cardProntosEntrega';
 
 <div className="opcoes-encomenda">
   <h2>Produtos à pronta Entrega</h2>
   <div className="produtos-grid">
-    {produtosProntosEntrega.map((produto, index) => (
+    {Bolos.map((produto, index) => (
     <CardProntosEntrega key={index} produto={produto} />
 ))}
 

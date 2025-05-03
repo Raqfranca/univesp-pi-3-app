@@ -15,11 +15,10 @@ function Navbar() {
       </div>
 
       <div className="navbar-middle">
-        <Link to="/" className="nav-item">Home</Link>
-        <Link to="/produtos-prontos-entrega" className="nav-item">Pronta entrega</Link>
-        <div className="logo-central">
+      <div className="logo-central">
           <img src="/images/logo-circulo.png" alt="Logo" />
         </div>
+        <Link to="/" className="nav-item">Home</Link>
         <Link to="/encomendar" className="nav-item">Encomendar</Link>
         <Link to="/sobre" className="nav-item">Sobre nós</Link>
       </div>
