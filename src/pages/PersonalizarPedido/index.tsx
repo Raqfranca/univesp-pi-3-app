@@ -66,7 +66,7 @@ const PersonalizarPedido = () => {
           </div>
         </div>
 
-        <button type="submit" className="botao-pagar">PAGAR</button>
+        <button type="submit" className="botao-pagar">FAZER PEDIDO</button>
       </form>
     </div>
     </div>
