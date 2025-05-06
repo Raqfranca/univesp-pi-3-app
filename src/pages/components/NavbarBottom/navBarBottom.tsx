@@ -6,11 +6,7 @@ import './navBarBottom.sass';
 function NavBarBottom() {
   return (
     <div className="nav-bar-bottom">
-      <Link to="/carrinho" className="nav-item">
-        <FiShoppingCart size={24} />
-        <span>Carrinho</span>
-      </Link>
-      <Link to="/login" className="nav-item">
+        <Link to="/login" className="nav-item">
         <FiLogIn size={24} />
         <span>Login</span>
       </Link>

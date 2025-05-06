@@ -16,7 +16,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/encomendar" element ={<PersonalizarPedido />} />
-        <Route path="/carinho" element ={<PersonalizarPedido />} />
         <Route path="/login" element ={<LoginPage />} />
         <Route path="/signup" element ={<CadastroPage />} />
         <Route path="/pedidos" element ={<MeusPedidosPage />} />

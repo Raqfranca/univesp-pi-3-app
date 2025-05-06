@@ -7,34 +7,34 @@ import NavBarBottom from 'pages/components/NavbarBottom/navBarBottom';
 
 
 export const Bolos = [
-  { img: '/images/bolo_chocolate.png', nome: 'Bolo de Chocolate', descricao: 'Bolo sabor chocolate, podendo conter adicionais diversos', preco: 'R$: 120,00' },
-  { img: '/images/bolo-abacaxi.png', nome: 'Bolo de Abacaxi', descricao: 'Bolo de abacaxi, ', preco: 'R$: 130,00' },
-  { img: '/images/bolo-morango.png', nome: 'bolo De Morango', descricao: 'Bolo de morango com recheio e frutas frescas', preco: 'R$: 140,00' },
-  { img: '/images/bolo-pistache.png', nome: 'Bolo de Pistache', descricao: 'Sensação do momento, bolo de pistache com pedaços de morango', preco: 'R$: 150,00' },
-  { img: '/images/bolo_chocolate.png', nome: 'Bolo de Chocolate', descricao: 'Bolo sabor chocolate, podendo conter adicionais diversos', preco: 'R$: 120,00' },
-  { img: '/images/bolo-abacaxi.png', nome: 'Bolo de Abacaxi', descricao: 'Bolo de abacaxi, ', preco: 'R$: 130,00' },
-  { img: '/images/bolo-morango.png', nome: 'bolo De Morango', descricao: 'Bolo de morango com recheio e frutas frescas', preco: 'R$: 140,00' },
-  { img: '/images/bolo-pistache.png', nome: 'Bolo de Pistache', descricao: 'Sensação do momento, bolo de pistache com pedaços de morango', preco: 'R$: 150,00' },
-  { img: '/images/bolo_chocolate.png', nome: 'Bolo de Chocolate', descricao: 'Bolo sabor chocolate, podendo conter adicionais diversos', preco: 'R$: 120,00' },
-  { img: '/images/bolo-abacaxi.png', nome: 'Bolo de Abacaxi', descricao: 'Bolo de abacaxi, ', preco: 'R$: 130,00' },
-  { img: '/images/bolo-morango.png', nome: 'bolo De Morango', descricao: 'Bolo de morango com recheio e frutas frescas', preco: 'R$: 140,00' },
-  { img: '/images/bolo-pistache.png', nome: 'Bolo de Pistache', descricao: 'Sensação do momento, bolo de pistache com pedaços de morango', preco: 'R$: 150,00' },
+  { img: '/images/Bolo_chocolate.png', nome: 'Bolo de Chocolate', descricao: 'Bolo saBor chocolate, podendo conter adicionais diversos', preco: 'R$: 120,00' },
+  { img: '/images/Bolo-Abacaxi.png', nome: 'Bolo de Abacaxi', descricao: 'Bolo de Abacaxi, ', preco: 'R$: 130,00' },
+  { img: '/images/Bolo-morango.png', nome: 'Bolo De Morango', descricao: 'Bolo de morango com recheio e frutas frescas', preco: 'R$: 140,00' },
+  { img: '/images/Bolo-pistache.png', nome: 'Bolo de Pistache', descricao: 'Sensação do momento, Bolo de pistache com pedaços de morango', preco: 'R$: 150,00' },
+  { img: '/images/Bolo_chocolate.png', nome: 'Bolo de Chocolate', descricao: 'Bolo saBor chocolate, podendo conter adicionais diversos', preco: 'R$: 120,00' },
+  { img: '/images/Bolo-Abacaxi.png', nome: 'Bolo de Abacaxi', descricao: 'Bolo de Abacaxi, ', preco: 'R$: 130,00' },
+  { img: '/images/Bolo-morango.png', nome: 'Bolo De Morango', descricao: 'Bolo de morango com recheio e frutas frescas', preco: 'R$: 140,00' },
+  { img: '/images/Bolo-pistache.png', nome: 'Bolo de Pistache', descricao: 'Sensação do momento, Bolo de pistache com pedaços de morango', preco: 'R$: 150,00' },
+  { img: '/images/Bolo_chocolate.png', nome: 'Bolo de Chocolate', descricao: 'Bolo saBor chocolate, podendo conter adicionais diversos', preco: 'R$: 120,00' },
+  { img: '/images/Bolo-Abacaxi.png', nome: 'Bolo de Abacaxi', descricao: 'Bolo de Abacaxi, ', preco: 'R$: 130,00' },
+  { img: '/images/Bolo-morango.png', nome: 'Bolo De Morango', descricao: 'Bolo de morango com recheio e frutas frescas', preco: 'R$: 140,00' },
+  { img: '/images/Bolo-pistache.png', nome: 'Bolo de Pistache', descricao: 'Sensação do momento, Bolo de pistache com pedaços de morango', preco: 'R$: 150,00' },
   
 ];
 
 export const CentoDoces = [
-  { img: '/images/cento_doces_tradicional.jpg', nome: 'Cento de doces tradicionais', descricao: 'Brigadeiro tradicionar, beijinho ou bicho de pé', preco: 'R$: 120,00' },
+  { img: '/images/cento_doces_tradicional.jpg', nome: 'Cento de doces tradicionais', descricao: 'Brigadeiro tradicionar, Beijinho ou Bicho de pé', preco: 'R$: 120,00' },
   { img: '/images/cento_doces.jpg', nome: 'Cento de doces finos', descricao: 'Ninho com nutella, paçoca, doce de leite, ferrero rocher, maraccuja, pistache', preco: 'R$: 140,00' },
-  { img: '/images/brigadeiro.jpg', nome: 'Brigadeiro na caixa', descricao: '100 brigadeiros para sua festa', preco: 'R$: 12,00' },
-  { img: '/images/bichodepe.jpg', nome: 'Bicho De Pé', descricao: 'Bicho de pé', preco: 'R$: 130,00' },
-  { img: '/images/cento_doces_tradicional.jpg', nome: 'Cento de doces tradicionais', descricao: 'Brigadeiro tradicionar, beijinho ou bicho de pé', preco: 'R$: 120,00' },
+  { img: '/images/Brigadeiro.jpg', nome: 'Brigadeiro na caixa', descricao: '100 Brigadeiros para sua festa', preco: 'R$: 12,00' },
+  { img: '/images/Bichodepe.jpg', nome: 'Bicho De Pé', descricao: 'Bicho de pé', preco: 'R$: 130,00' },
+  { img: '/images/cento_doces_tradicional.jpg', nome: 'Cento de doces tradicionais', descricao: 'Brigadeiro tradicionar, Beijinho ou Bicho de pé', preco: 'R$: 120,00' },
   { img: '/images/cento_doces.jpg', nome: 'Cento de doces finos', descricao: 'Ninho com nutella, paçoca, doce de leite, ferrero rocher, maraccuja, pistache', preco: 'R$: 140,00' },
-  { img: '/images/brigadeiro.jpg', nome: 'Brigadeiro na caixa', descricao: '100 brigadeiros para sua festa', preco: 'R$: 12,00' },
-  { img: '/images/bichodepe.jpg', nome: 'Bicho De Pé', descricao: 'Bicho de pé', preco: 'R$: 130,00' },
-  { img: '/images/cento_doces_tradicional.jpg', nome: 'Cento de doces tradicionais', descricao: 'Brigadeiro tradicionar, beijinho ou bicho de pé', preco: 'R$: 120,00' },
+  { img: '/images/Brigadeiro.jpg', nome: 'Brigadeiro na caixa', descricao: '100 Brigadeiros para sua festa', preco: 'R$: 12,00' },
+  { img: '/images/Bichodepe.jpg', nome: 'Bicho De Pé', descricao: 'Bicho de pé', preco: 'R$: 130,00' },
+  { img: '/images/cento_doces_tradicional.jpg', nome: 'Cento de doces tradicionais', descricao: 'Brigadeiro tradicionar, Beijinho ou Bicho de pé', preco: 'R$: 120,00' },
   { img: '/images/cento_doces.jpg', nome: 'Cento de doces finos', descricao: 'Ninho com nutella, paçoca, doce de leite, ferrero rocher, maraccuja, pistache', preco: 'R$: 140,00' },
-  { img: '/images/brigadeiro.jpg', nome: 'Brigadeiro na caixa', descricao: '100 brigadeiros para sua festa', preco: 'R$: 12,00' },
-  { img: '/images/bichodepe.jpg', nome: 'Bicho De Pé', descricao: 'Bicho de pé', preco: 'R$: 130,00' },
+  { img: '/images/Brigadeiro.jpg', nome: 'Brigadeiro na caixa', descricao: '100 Brigadeiros para sua festa', preco: 'R$: 12,00' },
+  { img: '/images/Bichodepe.jpg', nome: 'Bicho De Pé', descricao: 'Bicho de pé', preco: 'R$: 130,00' },
 ];
 
 export const DeliciasDaDri = [
