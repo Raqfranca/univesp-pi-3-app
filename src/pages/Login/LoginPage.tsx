@@ -1,7 +1,6 @@
 import React, { useState, FormEvent } from 'react';
 import './loginPage.sass';
 import { LineWave } from 'react-loader-spinner';
-import Navbar from 'pages/components/Navbar/navbar';
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState<string>('');

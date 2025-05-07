@@ -3,6 +3,7 @@ import { useReactTable, createColumnHelper, flexRender, getCoreRowModel } from "
 import Navbar from "pages/components/Navbar/navbar";
 import './listaDeProdutos.sass';
 import ProductModal from "pages/components/ProductModal/ProductModal";
+import { LineWave } from 'react-loader-spinner';
 import { useEffect } from "react"
 
 interface Product {
@@ -22,31 +23,25 @@ const columnHelper = createColumnHelper<Product>();
 const ProductListPage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([])
   const [showModal, setShowModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("https://univesp-pi-3-api.onrender.com/produtos")
-        const data = await response.json()
-        setProducts(data)
+        setIsLoading(true); 
+        const response = await fetch("https://univesp-pi-3-api.onrender.com/produtos");
+        const data = await response.json();
+        setProducts(data);
       } catch (error) {
-        console.error("Erro ao buscar produtos:", error)
+        console.error("Erro ao buscar produtos:", error);
+      } finally {
+        setIsLoading(false); 
       }
-    }
+    };
   
-    fetchProducts()
-  }, [])
+    fetchProducts();
+  }, []);
   
-
-  const handleSave = (newProduct: Product) => {
-    setProducts([...products, { ...newProduct, id: Date.now() }]);
-  };
-
-  const handleSaveProduct = (newProduct: Product) => {
-    setProducts((prev) => [...prev, { ...newProduct, id: Date.now() }])
-    setShowModal(false)
-  }
-
   const handleDelete = async (id: string) => {
     const confirmDelete = window.confirm("Tem certeza que deseja excluir?");
     if (!confirmDelete) return;
@@ -71,32 +66,7 @@ const ProductListPage: React.FC = () => {
   const handleAddProduct = () => {
     setShowModal(true)
   }
-  
-  const handleEdit = (product: Product) => {
-    const newNome = prompt("Novo nome:", product.nome);
-    const newPreco = prompt("Novo preço:", product.preco.toString());
-    const newDescricao = prompt("Nova descrição:", product.descricao);
-    const newCategoria = prompt("Nova categoria:", product.categoria || "");
-    const newQuantidade = prompt("Nova quantidade:", product.quantidade?.toString() || "0");
-
-    if (newNome && newPreco && newDescricao && newCategoria && newQuantidade) {
-      setProducts((prev) =>
-        prev.map((p) =>
-          p.id === product._id
-            ? {
-                ...p,
-                nome: newNome,
-                preco: parseFloat(newPreco),
-                descricao: newDescricao,
-                categoria: newCategoria,
-                quantidade: parseInt(newQuantidade),
-              }
-            : p
-        )
-      );
-    }
-  };
-
+    
   const columns = useMemo(
     () => [
       columnHelper.accessor("nome", {
@@ -120,7 +90,6 @@ const ProductListPage: React.FC = () => {
         header: "Ações",
         cell: ({ row }) => (
           <div>
-            <button onClick={() => handleEdit(row.original)}>Editar</button>
             <button onClick={() => handleDelete(row.original._id)} style={{ marginLeft: 10 }}>
               Excluir
             </button>
@@ -144,11 +113,9 @@ const ProductListPage: React.FC = () => {
         <div className="product-list-container">
           <h1>Produtos Cadastrados</h1>
           
-          {/* Botão de Criar Novo Produto */}
           {showModal && (
             <ProductModal
               onClose={() => setShowModal(false)}
-              onSave={handleSaveProduct}
             />
           )}
 
@@ -160,32 +127,46 @@ const ProductListPage: React.FC = () => {
             Cadastrar Produto
           </button>
           
-          <table className="product-table">
-            <thead>
-              {table.getHeaderGroups().map((headerGroup) => (
-                <tr key={headerGroup.id}>
-                  {headerGroup.headers.map((header) => (
-                    <th key={header.id}>
-                      {flexRender(header.column.columnDef.header, header.getContext())}
-                    </th>
-                  ))}
-                </tr>
-              ))}
-            </thead>
-            <tbody>
-              {table.getRowModel().rows.map((row) => (
-                <tr key={row.id}>
-                  {row.getVisibleCells().map((cell) => (
-                    <td key={cell.id}>
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          
-          {products.length === 0 && <p style={{ marginTop: 20 }}>Nenhum produto cadastrado.</p>}
+          {isLoading ? (
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: 40 }}>
+                <LineWave 
+                  height="100"
+                  width="100"
+                  color="#7a3a53"
+                  ariaLabel="line-wave"
+                  visible={true}
+                />
+              </div>
+            ) : (
+              <>
+                <table className="product-table">
+                  <thead>
+                    {table.getHeaderGroups().map((headerGroup) => (
+                      <tr key={headerGroup.id}>
+                        {headerGroup.headers.map((header) => (
+                          <th key={header.id}>
+                            {flexRender(header.column.columnDef.header, header.getContext())}
+                          </th>
+                        ))}
+                      </tr>
+                    ))}
+                  </thead>
+                  <tbody>
+                    {table.getRowModel().rows.map((row) => (
+                      <tr key={row.id}>
+                        {row.getVisibleCells().map((cell) => (
+                          <td key={cell.id}>
+                            {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+
+                {products.length === 0 && <p style={{ marginTop: 20 }}>Nenhum produto cadastrado.</p>}
+              </>
+            )}          
         </div>
       </div>
     </div>
