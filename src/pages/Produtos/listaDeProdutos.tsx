@@ -1,28 +1,42 @@
 import React, { useState, useMemo } from "react";
-import { useReactTable, createColumnHelper, flexRender, getCoreRowModel } from "@tanstack/react-table"; // Ajuste conforme a versão e pacote do React Table que você está usando
+import { useReactTable, createColumnHelper, flexRender, getCoreRowModel } from "@tanstack/react-table"; 
 import Navbar from "pages/components/Navbar/navbar";
 import './listaDeProdutos.sass';
 import ProductModal from "pages/components/ProductModal/ProductModal";
+import { useEffect } from "react"
 
 interface Product {
-  id: number;
-  nome: string;
-  preco: number;
-  descricao: string;
-  categoria?: string;
-  quantidade?: number;
+  _id: string
+  nome: string
+  descricao: string
+  preco: number
+  imagem: string
+  tipo: string
+  disponivel: boolean
+  categoria?: string
+  quantidade?: number
 }
-
-const produtosMock: Product[] = [
-  { id: 1, nome: "Bolo de Chocolate", preco: 40, descricao: "Cobertura cremosa", categoria: "Bolos", quantidade: 10 },
-  { id: 2, nome: "Cupcake de Morango", preco: 8, descricao: "Com chantilly", categoria: "Cupcakes", quantidade: 50 }
-];
 
 const columnHelper = createColumnHelper<Product>();
 
 const ProductListPage: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>(produtosMock);
+  const [products, setProducts] = useState<Product[]>([])
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("https://univesp-pi-3-api.onrender.com/produtos")
+        const data = await response.json()
+        setProducts(data)
+      } catch (error) {
+        console.error("Erro ao buscar produtos:", error)
+      }
+    }
+  
+    fetchProducts()
+  }, [])
+  
 
   const handleSave = (newProduct: Product) => {
     setProducts([...products, { ...newProduct, id: Date.now() }]);
@@ -33,12 +47,26 @@ const ProductListPage: React.FC = () => {
     setShowModal(false)
   }
 
-  const handleDelete = (id: number) => {
+  const handleDelete = async (id: string) => {
     const confirmDelete = window.confirm("Tem certeza que deseja excluir?");
-    if (confirmDelete) {
-      setProducts(products.filter((p) => p.id !== id));
+    if (!confirmDelete) return;
+  
+    try {
+      const response = await fetch(`https://univesp-pi-3-api.onrender.com/produtos/${id}`, {
+        method: "DELETE",
+      });
+  
+      if (!response.ok) {
+        throw new Error("Erro ao excluir produto");
+      }
+  
+      setProducts((prev) => prev.filter((p) => p._id !== id));
+    } catch (error) {
+      console.error("Erro ao excluir produto:", error);
+      alert("Erro ao excluir produto. Tente novamente.");
     }
   };
+  
 
   const handleAddProduct = () => {
     setShowModal(true)
@@ -54,7 +82,7 @@ const ProductListPage: React.FC = () => {
     if (newNome && newPreco && newDescricao && newCategoria && newQuantidade) {
       setProducts((prev) =>
         prev.map((p) =>
-          p.id === product.id
+          p.id === product._id
             ? {
                 ...p,
                 nome: newNome,
@@ -93,7 +121,7 @@ const ProductListPage: React.FC = () => {
         cell: ({ row }) => (
           <div>
             <button onClick={() => handleEdit(row.original)}>Editar</button>
-            <button onClick={() => handleDelete(row.original.id)} style={{ marginLeft: 10 }}>
+            <button onClick={() => handleDelete(row.original._id)} style={{ marginLeft: 10 }}>
               Excluir
             </button>
           </div>
