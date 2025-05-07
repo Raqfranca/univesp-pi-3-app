@@ -77,10 +77,6 @@ const LoginPage: React.FC = () => {
             />
           </div>
         ) : error && <p className="error-message">{error}</p>}
-
-        <p className="signup-text">
-          Não tem conta? <a href="/signup">Cadastre-se</a>
-        </p>
       </div>
     </div>
   );

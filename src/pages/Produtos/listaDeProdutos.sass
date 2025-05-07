@@ -1,0 +1,68 @@
+$product-color: #d080b0
+$product-color-hover: #7a3a53
+$border-color: #ccc
+$bg-header: #f8f8f8
+
+.product-list-page
+  padding: 2rem
+
+  .product-list-container
+    max-width: 900px
+    margin: 0 auto
+
+    h1
+      margin-bottom: 1.5rem
+
+    .product-table
+      width: 100%
+      border-collapse: collapse
+      margin-top: 1rem
+
+      th, td
+        border: 1px solid $border-color
+        padding: 0.75rem
+        text-align: left
+
+      th
+        background-color: $bg-header
+
+      button
+        padding: 0.4rem 0.8rem
+        border: none
+        background-color: $product-color
+        color: white
+        cursor: pointer
+        border-radius: 4px
+        transition: background-color 0.2s ease
+
+        &:hover
+          background-color: $product-color-hover
+
+        &:not(:last-child)
+          margin-right: 0.5rem
+
+    p
+      margin-top: 1.5rem
+      font-style: italic
+      text-align: center
+
+  .cadastrar-btn
+    padding: 0.4rem 0.8rem
+    border: none
+    background-color: $product-color
+    color: white
+    cursor: pointer
+    border-radius: 4px
+    transition: background-color 0.2s ease
+
+    &:hover
+      background-color: $product-color-hover
+
+    &:not(:last-child)
+      margin-right: 0.5rem
+    
+
+  
+
+
+

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar/navbar';
 import './home.sass'
 import CardProntosEntrega from '../components/CardProntosEntrega/cardProntosEntrega';
-import NavBarBottom from 'pages/components/NavbarBottom/navBarBottom';
 
 
 export const Bolos = [
@@ -107,12 +106,6 @@ function Home() {
           ))}
         </div>
       </div>
-
-      <footer>
-        <div className="footer-menu">
-          <NavBarBottom/>
-        </div>
-      </footer>
     </div>
   );
 }
