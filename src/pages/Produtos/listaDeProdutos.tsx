@@ -73,6 +73,17 @@ const ProductListPage: React.FC = () => {
         header: "Nome",
         cell: (info) => info.getValue(),
       }),
+      {
+        accessorKey: 'imagem',
+        header: 'Foto',
+        cell: ({ row }) => (
+          <img 
+            src={row.original.imagem} 
+            alt={row.original.nome} 
+            style={{ width: '50px', height: '50px', objectFit: 'cover', borderRadius: '8px' }} 
+          />
+        ),
+      },
       columnHelper.accessor("preco", {
         header: "Preço (R$)",
         cell: (info) => `R$ ${info.getValue().toFixed(2)}`,

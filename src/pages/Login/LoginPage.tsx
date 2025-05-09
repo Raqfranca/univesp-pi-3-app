@@ -34,7 +34,7 @@ const LoginPage: React.FC = () => {
       console.log('Login realizado com sucesso!');
     
 
-      window.location.href = '/pedidos';
+      window.location.href = '/produtos';
     } catch (error) {
       console.error(error);
       setError('Email ou senha inválidos. Tente novamente.');
