@@ -5,6 +5,7 @@ import './listaDeProdutos.sass';
 import ProductModal from "pages/components/ProductModal/ProductModal";
 import { LineWave } from 'react-loader-spinner';
 import { useEffect } from "react"
+import EditProductModal from "pages/components/EditProductModal/EditProductModal";
 
 interface Product {
   _id: string
@@ -24,6 +25,8 @@ const ProductListPage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([])
   const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [produtoSelecionado, setProdutoSelecionado] = useState(null);
+  const [modalAberto, setModalAberto] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -62,7 +65,23 @@ const ProductListPage: React.FC = () => {
     }
   };
   
+  const handleEdit = (produto) => {
+    setProdutoSelecionado(produto);
+    setModalAberto(true);
+  };
 
+  const fecharModal = () => {
+    setModalAberto(false);
+    setProdutoSelecionado(null);
+  };
+  
+  const handleUpdateProduct = (produtoAtualizado) => {
+    const novosProdutos = products.map((p) =>
+      p._id === produtoAtualizado._id ? produtoAtualizado : p
+    );
+    setProducts(novosProdutos);
+  };
+  
   const handleAddProduct = () => {
     setShowModal(true)
   }
@@ -101,9 +120,14 @@ const ProductListPage: React.FC = () => {
         header: "Ações",
         cell: ({ row }) => (
           <div>
-            <button onClick={() => handleDelete(row.original._id)} style={{ marginLeft: 10 }}>
+            <button onClick={() => handleEdit(row.original)} >
+              Editar
+            </button>
+
+            <button onClick={() => handleDelete(row.original._id)}>
               Excluir
             </button>
+
           </div>
         ),
       }),
@@ -127,6 +151,14 @@ const ProductListPage: React.FC = () => {
           {showModal && (
             <ProductModal
               onClose={() => setShowModal(false)}
+            />
+          )}
+
+          {modalAberto && (
+            <EditProductModal
+              product={produtoSelecionado}
+              onClose={fecharModal}
+              onUpdate={handleUpdateProduct} 
             />
           )}
 
