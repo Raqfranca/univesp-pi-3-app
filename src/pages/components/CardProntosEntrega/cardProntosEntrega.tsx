@@ -1,12 +1,11 @@
 import React from 'react';
-import '../card.sass'
-
+import '../card.sass';
 
 interface Produto {
-  img: string;
+  imagem: string;
   nome: string;
   descricao: string;
-  preco: string;
+  preco: number;
 }
 
 interface CardProntosEntregaProps {
@@ -16,10 +15,10 @@ interface CardProntosEntregaProps {
 const CardProntosEntrega: React.FC<CardProntosEntregaProps> = ({ produto }) => {
   return (
     <div className="card-prontos-entrega">
-      <img src={produto.img} alt={produto.nome} />
+      <img src={produto.imagem} alt={produto.nome} />
       <h3>{produto.nome}</h3>
       <p>{produto.descricao}</p>
-      <p>{produto.preco}</p>
+      <p>R$ {produto.preco.toFixed(2)}</p>
     </div>
   );
 };

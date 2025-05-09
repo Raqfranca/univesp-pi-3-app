@@ -1,0 +1,35 @@
+[debug] [2025-05-07T22:21:51.640Z] ----------------------------------------------------------------------
+[debug] [2025-05-07T22:21:51.647Z] Command:       /home/raqfranca/.nvm/versions/node/v20.19.0/bin/node /usr/local/bin/firebase deploy --only hosting:univesp-pi-3-c2afb --project univesp-pi
+[debug] [2025-05-07T22:21:51.647Z] CLI Version:   13.15.0
+[debug] [2025-05-07T22:21:51.647Z] Platform:      linux
+[debug] [2025-05-07T22:21:51.647Z] Node Version:  v20.19.0
+[debug] [2025-05-07T22:21:51.647Z] Time:          Wed May 07 2025 19:21:51 GMT-0300 (Brasilia Standard Time)
+[debug] [2025-05-07T22:21:51.647Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-07T22:21:51.688Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-07T22:21:51.688Z] > authorizing via signed-in user (raquelofranca@gmail.com)
+[debug] [2025-05-07T22:21:51.689Z] [iam] checking project univesp-pi for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-05-07T22:21:51.690Z] > refreshing access token with scopes: []
+[debug] [2025-05-07T22:21:51.691Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-05-07T22:21:51.691Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-07T22:21:51.913Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-05-07T22:21:51.913Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-07T22:21:51.917Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/univesp-pi:testIamPermissions [none]
+[debug] [2025-05-07T22:21:51.917Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/univesp-pi:testIamPermissions x-goog-quota-user=projects/univesp-pi
+[debug] [2025-05-07T22:21:51.917Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/univesp-pi:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-07T22:21:53.071Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/univesp-pi:testIamPermissions 200
+[debug] [2025-05-07T22:21:53.071Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/univesp-pi:testIamPermissions {}
+[debug] [2025-05-07T22:21:53.071Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project univesp-pi:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2025-05-07T22:21:53.072Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/univesp-pi [none]
+[debug] [2025-05-07T22:21:53.671Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/univesp-pi 403
+[debug] [2025-05-07T22:21:53.671Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/univesp-pi {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-05-07T22:21:53.672Z] HTTP Error: 403, The caller does not have permission
+[debug] [2025-05-07T22:21:53.851Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project univesp-pi. Please make sure the project exists and your account has permission to access it.
