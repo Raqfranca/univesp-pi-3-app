@@ -12,11 +12,10 @@ const Sobre = () => {
         <div className="texto">
           <h2>Quem é a Drii?</h2>
           <p>
-            A Drii é uma confeiteira apaixonada que aprendeu os primeiros segredos da doçaria com sua tia, 
-            ainda na juventude. O que começou como uma simples curiosidade logo se transformou em vocação. 
-            Hoje, além de encantar com seus doces feitos com amor e cuidado, 
-            ela também é mãe de três filhos — sua maior fonte de inspiração. 
-            Cada receita carrega um pouco da sua história, carinho e dedicação.
+            Oie, meu nome é Drielli, mas pode me chamar de Drii! Tenho 29 anos, sou mãe de três e apaixonada por tudo que envolve o mundo da confeitaria 🤭💞
+            Desde criança, a cozinha sempre foi meu lugar favorito. Cresci vendo minha avó e minha tia inventando delícias, e foi ali que meu amor por criar doces começou. 
+            Em 2024, mesmo com medo, decidi dar o primeiro passo com apenas alguns docinhos — e não parei mais! Nosso pão de mel, por exemplo, virou um verdadeiro sucesso 😍
+            Cada receita que faço carrega um pedacinho da minha história, muito carinho e dedicação. Meus filhos são minha maior inspiração e tudo que faço é com muito amor, para adoçar momentos e corações. 💖
           </p>
         </div>
         <div className="imagem redonda">
@@ -32,10 +31,11 @@ const Sobre = () => {
         <div className="texto">
           <h2 className="destaque">Nosso diferencial</h2>
           <p>
-            O que torna nossos doces únicos vai muito além dos ingredientes: é a qualidade impecável, 
-            o sabor que surpreende a cada mordida e o carinho presente em cada etapa da produção. 
-            Nossas receitas carregam técnicas transmitidas de geração em geração, combinando tradição familiar com toques modernos. 
-            Cada produto é feito com atenção aos detalhes, resultando em uma experiência doce, autêntica e inesquecível.
+           O que torna nossos doces realmente especiais vai muito além dos ingredientes. É o amor, o carinho e o cuidado presente em cada detalhe — 
+           desde a escolha dos produtos até a entrega final. 
+           Cada mordida é como aquele abraço quentinho de quem a gente ama 💞
+           Nossas receitas unem tradição familiar e toques modernos, com técnicas passadas de geração em geração. 
+           Tudo é feito com atenção, afeto e dedicação, resultando em uma experiência doce, autêntica e inesquecível — do jeitinho que você merece!
           </p>
         </div>
       </section>
