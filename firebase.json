@@ -1,6 +1,6 @@
 {
     "hosting": {
-      "site": "univesp-pi-3-c2afb",
+      "site": "app-pi-3",
       "public": "build",
       "ignore": [
         "firebase.json",
